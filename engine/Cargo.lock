@@ -930,7 +930,6 @@ dependencies = [
  "expect-test",
  "fastrand 2.1.0",
  "futures",
- "futures-timer",
  "hostname",
  "http 1.1.0",
  "http-body 1.0.1",
@@ -941,7 +940,6 @@ dependencies = [
  "internal-baml-codegen",
  "internal-baml-core",
  "internal-baml-jinja",
- "js-sys",
  "json_comments",
  "jsonish",
  "jsonwebtoken",
@@ -953,12 +951,9 @@ dependencies = [
  "pretty_assertions",
  "reqwest 0.12.5",
  "reqwest-eventsource",
- "ring",
  "rstest",
  "scopeguard",
- "send_wrapper 0.6.0",
  "serde",
- "serde-wasm-bindgen 0.6.5",
  "serde_json",
  "shell-escape",
  "static_assertions",
@@ -972,46 +967,8 @@ dependencies = [
  "url",
  "uuid",
  "walkdir",
- "wasm-bindgen",
- "wasm-bindgen-futures",
  "wasm-bindgen-test",
  "wasm-logger",
- "web-sys",
- "web-time",
-]
-
-[[package]]
-name = "baml-schema-build"
-version = "0.55.3"
-dependencies = [
- "anyhow",
- "baml-runtime",
- "baml-types",
- "cfg-if",
- "console_error_panic_hook",
- "console_log",
- "dissimilar",
- "either",
- "expect-test",
- "getrandom",
- "indexmap 2.2.6",
- "indoc",
- "internal-baml-codegen",
- "internal-baml-core",
- "js-sys",
- "log",
- "serde",
- "serde-wasm-bindgen 0.4.5",
- "serde_json",
- "time",
- "url",
- "uuid",
- "walkdir",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "wasm-bindgen-test",
- "wasm-logger",
- "web-sys",
  "web-time",
 ]
 
@@ -1360,7 +1317,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be8aed40e4edbf4d3b4431ab260b63fdc40f5780a4766824329ea0f1eefe3c0f"
 dependencies = [
  "log",
- "wasm-bindgen",
  "web-sys",
 ]
 
@@ -1950,10 +1906,6 @@ name = "futures-timer"
 version = "3.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f288b0a4f20f9a56b5d1da57e2227c661b7b16168e2f72365f57b63326e29b24"
-dependencies = [
- "gloo-timers",
- "send_wrapper 0.4.0",
-]
 
 [[package]]
 name = "futures-util"
@@ -4124,21 +4076,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "send_wrapper"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f638d531eccd6e23b980caf34876660d38e265409d8e99b397ab71eb3612fad0"
-
-[[package]]
-name = "send_wrapper"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd0b0ec5f1c1ca621c432a25813d8d60c88abe6d3e08a3eb9cf37d97a0fe3d73"
-dependencies = [
- "futures-core",
-]
-
-[[package]]
 name = "seq-macro"
 version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4151,28 +4088,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "99fce0ffe7310761ca6bf9faf5115afbc19688edd00171d81b1bb1b116c63e09"
 dependencies = [
  "serde_derive",
-]
-
-[[package]]
-name = "serde-wasm-bindgen"
-version = "0.4.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e3b4c031cd0d9014307d82b8abf653c0290fbdaeb4c02d00c63cf52f728628bf"
-dependencies = [
- "js-sys",
- "serde",
- "wasm-bindgen",
-]
-
-[[package]]
-name = "serde-wasm-bindgen"
-version = "0.6.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8302e169f0eddcc139c70f139d19d6467353af16f9fce27e8c30158036a1e16b"
-dependencies = [
- "js-sys",
- "serde",
- "wasm-bindgen",
 ]
 
 [[package]]
@@ -4993,7 +4908,6 @@ checksum = "81dfa00651efa65069b0b6b651f4aaa31ba9e3c3ce0137aaad053604ee7e0314"
 dependencies = [
  "getrandom",
  "serde",
- "wasm-bindgen",
 ]
 
 [[package]]
@@ -5105,8 +5019,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4be2531df63900aeb2bca0daaaddec08491ee64ceecbee5076636a3b026795a8"
 dependencies = [
  "cfg-if",
- "serde",
- "serde_json",
  "wasm-bindgen-macro",
 ]
 
