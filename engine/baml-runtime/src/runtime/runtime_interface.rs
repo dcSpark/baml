@@ -404,6 +404,7 @@ impl RuntimeInterface for InternalBamlRuntime {
                 allow_implicit_cast_to_string: false,
             },
         )?;
+        eprintln!("baml_args: {:?}", baml_args);
         // let baml_args = match self.ir().check_function_params(
         //     &func,
         //     &params,
