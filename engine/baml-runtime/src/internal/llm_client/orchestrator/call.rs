@@ -43,7 +43,9 @@ pub async fn orchestrate(
                 continue;
             }
         };
+        eprintln!("prompt request: {:?}", prompt);
         let response = node.single_call(&ctx, &prompt).await;
+        eprintln!("prompt response: {:?}", response);
         let parsed_response = match &response {
             LLMResponse::Success(s) => Some(parse_fn(&s.content)),
             _ => None,

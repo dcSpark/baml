@@ -432,7 +432,9 @@ impl RuntimeInterface for InternalBamlRuntime {
         // Now actually execute the code.
         let (history, _) =
             orchestrate_call(orchestrator, self.ir(), &ctx, &renderer, &baml_args, |s| {
-                renderer.parse(s, false)
+                let parsed = renderer.parse(s, false);
+                eprintln!("orchestrate_call Parsed: {:?}", parsed);
+                parsed
             })
             .await;
 
